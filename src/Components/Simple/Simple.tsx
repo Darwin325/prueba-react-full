@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { SimpleProduct } from "../../Models/Product";
+import { ProductType, SimpleProduct } from "../../Models/Product";
 import { getProductById } from "../../Services/Mocks/products";
 import { useParams } from "react-router-dom";
 import "./main.css";
+import ProductNotfound from "../Shared/ProductNotfound";
 
 function Simple() {
   const id: number = parseInt(useParams().id as string);
@@ -12,10 +13,12 @@ function Simple() {
   );
 
   useEffect(() => {
-    setProductDetails(getProductById(id) as SimpleProduct);
+    setProductDetails(getProductById(ProductType.SIMPLE, id) as SimpleProduct);
   }, []);
 
-  return (
+  return productDetails === undefined ? (
+    <ProductNotfound/>
+  ) : (
     <div className="simple-container">
       <div>
         <img src={productDetails.image} alt={productDetails.name} />
@@ -27,15 +30,18 @@ function Simple() {
           <b>Vendedor:</b> {productDetails.seller}
         </div>
         <div>
-          <p className="description-text"><b>Descripción:</b> {productDetails.description}</p>
+          <p className="description-text">
+            <b>Descripción:</b> {productDetails.description}
+          </p>
         </div>
         <div>
-          <p><b>Precio:</b> ${productDetails.price}</p>
+          <p>
+            <b>Precio:</b> ${productDetails.price}
+          </p>
         </div>
         <div>
           <b>Cantidad:</b> {productDetails.inventory}
         </div>
-        
       </div>
     </div>
   );

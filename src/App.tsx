@@ -3,6 +3,7 @@ import './App.css'
 import { lazy } from 'react'
 
 const Simple = lazy(()=> import('./Components/Simple/Simple'))
+const Rentable = lazy(()=> import('./Components/Rentable/Rentable'))
 
 function App() {
 
@@ -12,7 +13,9 @@ function App() {
       <Routes>
         <Route path="/simple/:id" element={<Simple/>} />
 
-        <Route path="about" element={<h1>About</h1>} />
+        <Route path="rentable/:id" element={<Rentable/>} />
+
+        
         <Route path="*" element={<h1>404</h1>} />
       </Routes>
      </BrowserRouter>

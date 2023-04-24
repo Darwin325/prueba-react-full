@@ -13,10 +13,19 @@ export interface SimpleProduct extends BasicProduct {
 
 export interface RentableProduct extends BasicProduct {
   rentType: string;
+  pricePerHour: number;
   availabilityDate: string;
 }
 
 export interface SpaceProduct extends BasicProduct {
   location: string;
   availabilityDate: string;
+}
+
+export type returnType  = SimpleProduct | RentableProduct | SpaceProduct;
+
+export enum ProductType {
+  SIMPLE = 'simple',
+  RENTABLE = 'rentable',
+  SPACE = 'space'
 }

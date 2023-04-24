@@ -1,9 +1,9 @@
 import { products } from "../../Mocks/Products"
-import { RentableProduct, SimpleProduct, SpaceProduct } from "../../Models/Product";
+import { ProductType, returnType, SimpleProduct } from "../../Models/Product";
 
-export const getProduts = async (typeProduct = 'simple') => {
+export const getProduts = (productType: ProductType): returnType[] => {
 
-  switch (typeProduct.toLowerCase()) {
+  switch (productType.toLowerCase()) {
     case 'simple':
       return products.filter( (product) => !!product.inventory)
       break;
@@ -15,12 +15,12 @@ export const getProduts = async (typeProduct = 'simple') => {
         break;
         default:
           // lanzar un error
-          new Error('No se ha encontrado el tipo de producto')
+          throw new Error('No se ha encontrado el tipo de producto') 
   }
 }
 
-type returnType  = SimpleProduct | RentableProduct | SpaceProduct;
+export const getProductById = (productType: ProductType ,id: number): returnType => {
 
-export const getProductById = (id: number): returnType => {
-  return products.find( (product) => product.id === id) as SimpleProduct
+  const filterProducts = getProduts(productType)
+  return filterProducts.find( (product) => product.id === id) as returnType
 }
