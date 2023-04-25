@@ -115,7 +115,7 @@ export const products = [
       price: 110,
       image: "https://placeimg.com/640/480/arch",
       seller: "Seller 11",
-      location: "Location 1",
+      location: { lat: 6.27132980453294, lng: -75.56376524416952 },
       availabilityDate: "2023-06-01",
       description:
          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sapiente minima consequuntur reprehenderit, dignissimos voluptatibus sequi aperiam alias voluptatem quia, dolorum error ullam ipsa non impedit corrupti fugiat iusto! Perferendis?",
@@ -126,7 +126,7 @@ export const products = [
       price: 120,
       image: "https://placeimg.com/640/480/arch",
       seller: "Seller 12",
-      location: "Location 2",
+      location: { lat: 6.200265251449387, lng: -75.5733727227928 },
       availabilityDate: "2023-06-15",
       description:
          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sapiente minima consequuntur reprehenderit, dignissimos voluptatibus sequi aperiam alias voluptatem quia, dolorum error ullam ipsa non impedit corrupti fugiat iusto! Perferendis?",
@@ -137,7 +137,7 @@ export const products = [
       price: 130,
       image: "https://placeimg.com/640/480/arch",
       seller: "Seller 13",
-      location: "Location 3",
+      location: { lat: 4.427536042050286, lng: -75.18328775135005 },
       availabilityDate: "2023-07-01",
       description:
          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sapiente minima consequuntur reprehenderit, dignissimos voluptatibus sequi aperiam alias voluptatem quia, dolorum error ullam ipsa non impedit corrupti fugiat iusto! Perferendis?",
@@ -151,7 +151,7 @@ export const products = [
       description:
          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sapiente minima consequuntur reprehenderit, dignissimos voluptatibus sequi aperiam alias voluptatem quia, dolorum error ullam ipsa non impedit corrupti fugiat iusto! Perferendis?",
       seller: "Seller 14",
-      location: "Location 4",
+      location: { lat: 4.447603001045108, lng: -75.24240363611581 },
    },
    {
       id: 15,
@@ -159,7 +159,7 @@ export const products = [
       price: 150,
       image: "https://placeimg.com/640/480/arch",
       seller: "Seller 15",
-      location: "Location 5",
+      location: { lat: 4.446161758983984, lng: -75.20486888225949 },
       availabilityDate: "2023-08-01",
       description:
          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sapiente minima consequuntur reprehenderit, dignissimos voluptatibus sequi aperiam alias voluptatem quia, dolorum error ullam ipsa non impedit corrupti fugiat iusto! Perferendis?",
@@ -170,7 +170,7 @@ export const products = [
       price: 160,
       image: "https://placeimg.com/640/480/arch",
       seller: "Seller 16",
-      location: "Location 6",
+      location: { lat: 4.431582239599759, lng: -75.21787223114087 },
       availabilityDate: "2023-08-15",
       description:
          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sapiente minima consequuntur reprehenderit, dignissimos voluptatibus sequi aperiam alias voluptatem quia, dolorum error ullam ipsa non impedit corrupti fugiat iusto! Perferendis?",
@@ -181,7 +181,7 @@ export const products = [
       price: 170,
       image: "https://placeimg.com/640/480/arch",
       seller: "Seller 17",
-      location: "Location 7",
+      location: { lat: 11.239961479599529, lng: -74.19519345028735 },
       availabilityDate: "2023-09-01",
       description:
          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sapiente minima consequuntur reprehenderit, dignissimos voluptatibus sequi aperiam alias voluptatem quia, dolorum error ullam ipsa non impedit corrupti fugiat iusto! Perferendis?",
@@ -192,7 +192,7 @@ export const products = [
       price: 180,
       image: "https://placeimg.com/640/480/arch",
       seller: "Seller 18",
-      location: "Location 8",
+      location: { lat: 11.246333444172112, lng: -74.2145499908573 },
       availabilityDate: "2023-09-15",
       description:
          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sapiente minima consequuntur reprehenderit, dignissimos voluptatibus sequi aperiam alias voluptatem quia, dolorum error ullam ipsa non impedit corrupti fugiat iusto! Perferendis?",
@@ -203,7 +203,7 @@ export const products = [
       price: 190,
       image: "https://placeimg.com/640/480/arch",
       seller: "Seller 19",
-      location: "Location 9",
+      location: { lat: 11.265857629215587, lng: -74.19031512451924 },
       availabilityDate: "2023-10-01",
       description:
          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sapiente minima consequuntur reprehenderit, dignissimos voluptatibus sequi aperiam alias voluptatem quia, dolorum error ullam ipsa non impedit corrupti fugiat iusto! Perferendis?",
@@ -214,7 +214,7 @@ export const products = [
       price: 200,
       image: "https://placeimg.com/640/480/arch",
       seller: "Seller 20",
-      location: "Location 10",
+      location: { lat: 11.206990781396534, lng: -74.22862071971151 },
       availabilityDate: "2023-10-15",
       description:
          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sapiente minima consequuntur reprehenderit, dignissimos voluptatibus sequi aperiam alias voluptatem quia, dolorum error ullam ipsa non impedit corrupti fugiat iusto! Perferendis?",

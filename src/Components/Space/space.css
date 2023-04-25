@@ -1,0 +1,7 @@
+.space-container {
+   display: flex;
+   justify-content: center;
+   column-gap: 5rem;
+   height: 100vh;
+   width: 95%;
+}
