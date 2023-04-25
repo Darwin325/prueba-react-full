@@ -1,26 +1,39 @@
 import { products } from "../../Mocks/Products"
-import { ProductType, returnType, SimpleProduct } from "../../Models/Product";
+import {
+   ProductType,
+   RentableProduct,
+   returnType,
+   SimpleProduct,
+   SpaceProduct,
+} from "../../Models/Product"
 
-export const getProduts = (productType: ProductType): returnType[] => {
-
-  switch (productType.toLowerCase()) {
-    case 'simple':
-      return products.filter( (product) => !!product.inventory)
-      break;
-    case 'rentable':
-      return products.filter( (product) => !!product.rentType)
-      break;
-      case 'space':
-        return products.filter( (product) => !!product.location)
-        break;
-        default:
-          // lanzar un error
-          throw new Error('No se ha encontrado el tipo de producto') 
-  }
+export const getProductsMock = (productType: ProductType): returnType[] => {
+   switch (productType.toLowerCase()) {
+      case "simple":
+         return products.filter(
+            (product) => !!product.inventory
+         ) as SimpleProduct[]
+         break
+      case "rentable":
+         return products.filter(
+            (product) => !!product.rentType
+         ) as RentableProduct[]
+         break
+      case "space":
+         return products.filter(
+            (product) => !!product.location
+         ) as SpaceProduct[]
+         break
+      default:
+         // lanzar un error
+         throw new Error("No se ha encontrado el tipo de producto")
+   }
 }
 
-export const getProductById = (productType: ProductType ,id: number): returnType => {
-
-  const filterProducts = getProduts(productType)
-  return filterProducts.find( (product) => product.id === id) as returnType
+export const getProductByIdMock = (
+   productType: ProductType,
+   id: number
+): returnType => {
+   const filterProducts = getProductsMock(productType)
+   return filterProducts.find((product) => product.id === id) as returnType
 }
